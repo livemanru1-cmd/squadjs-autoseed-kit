@@ -28,3 +28,18 @@ test("portable exporter never disables TLS certificate verification", () => {
   );
   assert.doesNotMatch(exporter, /rejectUnauthorized:\s*false/);
 });
+
+test("Pages workflow pins every third-party action to a full commit", () => {
+  const workflow = readFileSync(
+    new URL("../.github/workflows/pages.yml", import.meta.url),
+    "utf8"
+  );
+  const actionReferences = [...workflow.matchAll(/^\s*uses:\s*(\S+)/gm)].map(
+    ([, reference]) => reference
+  );
+
+  assert.ok(actionReferences.length > 0);
+  for (const reference of actionReferences) {
+    assert.match(reference, /^[^@\s]+@[0-9a-f]{40}$/);
+  }
+});
