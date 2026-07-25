@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    {
+      "plugin": "AutoseedExporter",
+      "enabled": true,
+      "listenHost": "${AUTOSEED_EXPORTER_HOST}",
+      "listenPort": 32080,
+      "pathPrefix": "/v1/autoseed",
+      "serverId": 1,
+      "serverCode": "server-1",
+      "serverName": "My Squad Server",
+      "isSeedCandidate": true,
+      "squadbrowserApiKey": "${SQUADBROWSER_API_KEY}",
+      "corsOrigins": ["https://OWNER.github.io"],
+      "staleAfterMs": 90000,
+      "rateLimitWindowMs": 60000,
+      "rateLimitMaxRequests": 120,
+      "eventStreamMaxConnectionsPerIp": 4
+    }
+  ]
+}

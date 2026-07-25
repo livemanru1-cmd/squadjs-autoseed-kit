@@ -1,0 +1,12 @@
+{
+  "name": "squadjs-autoseed-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test && bash -n scripts/install.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

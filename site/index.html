@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; connect-src https:; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'"
+    >
+    <title>Автосид Squad</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Squad server seeding</p>
+      <h1>Автосид</h1>
+      <p id="recommended">Ищу доступный сервер…</p>
+      <p id="status" role="status">Загружаю данные…</p>
+      <section id="servers" class="server-grid" aria-label="Серверы"></section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
